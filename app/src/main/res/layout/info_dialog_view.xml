@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/dialogImage"
+        android:padding="20dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_device_dialog"
+        android:scaleType="center" />
+
+    <com.softteco.roadlabpro.view.TypefaceTextView
+        android:id="@+id/dialogText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:text="test text"
+        android:textSize="18dip"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:paddingBottom="20dip"
+        android:gravity="center"
+        app:font="@string/font_roboto_regular" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/gray_divider" />
+
+    <com.softteco.roadlabpro.view.CustomButton
+        android:id="@+id/okButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/summary_dialog_btns_height"
+        android:textColor="@color/blue_about"
+        android:textSize="18dip"
+        android:text="@string/summary_dialog_close_str"
+        android:background="@drawable/black_selectable_bgr" />
+</LinearLayout>

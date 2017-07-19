@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roadapp="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_bar_export"
+        android:title="@string/export_hint"
+        roadapp:showAsAction="ifRoom|withText" />
+
+</menu>

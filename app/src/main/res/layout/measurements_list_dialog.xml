@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <ListView
+        android:id="@+id/valuesList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:listSelector="@drawable/black_selectable_bgr"
+        android:divider="@color/gray_divider"
+        android:dividerHeight="1px"
+        android:textSize="20sp"
+        android:paddingTop="68dip"
+        android:paddingBottom="52dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dip"
+        android:layout_gravity="top"
+        android:orientation="vertical" >
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/header_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:font="@string/font_roboto_medium"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:text="@string/time_interval"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="10dp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:id="@+id/dlg_divider_header"
+            android:background="@color/dialog_divider" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dip"
+        android:layout_gravity="bottom" >
+
+        <View
+            android:id="@+id/dividerTopButtons"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/hint_color" />
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/btnAccept"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:layout_toLeftOf="@+id/dividerMiddleButtons"
+            android:background="@drawable/black_selectable_bgr"
+            android:layout_weight="1"
+            android:gravity="center"
+            app:font="@string/font_roboto_medium"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:text="@string/apply" />
+
+        <View
+            android:id="@+id/dividerMiddleButtons"
+            android:layout_width="0.5dip"
+            android:layout_centerInParent="true"
+            android:layout_height="match_parent"
+            android:background="@color/hint_color" />
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:clickable="true"
+            android:layout_toRightOf="@+id/dividerMiddleButtons"
+            android:background="@drawable/black_selectable_bgr"
+            app:font="@string/font_roboto_medium"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:text="@string/cancel" />
+
+    </RelativeLayout>
+
+</FrameLayout>

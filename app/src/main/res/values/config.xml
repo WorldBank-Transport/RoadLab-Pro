@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+
+    <string name="ftp_server">178.62.134.43</string>
+    <string name="ftp_user">ftpuser</string>
+    <string name="ftp_pass">ftppass</string>
+
+</resources>

@@ -1,0 +1,112 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/fr_settings_vehicle_block"
+            layout="@layout/settings_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/fr_settings_android_block"
+            layout="@layout/settings_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/fr_settings_time_block"
+            layout="@layout/settings_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/fr_settings_thresholds_block"
+            layout="@layout/settings_edit_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/fr_settings_more_thresholds_block"
+            layout="@layout/settings_edit_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/fr_settings_suspension_block"
+            layout="@layout/settings_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/fr_settings_sync_provider"
+            layout="@layout/settings_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/fr_settings_always_on_screen"
+            layout="@layout/settings_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+<!--        <com.softteco.roadlabpro.view.CustomButton
+            android:id="@+id/fr_settings_btn_export_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_blue_selected"
+            android:text="@string/fr_settings_dbx_export_data"
+            android:textColor="@android:color/white"
+            app:font="@string/font_roboto_medium" />-->
+
+        <com.softteco.roadlabpro.view.CustomButton
+            android:id="@+id/fr_settings_btn_dbx_login_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_blue_selected"
+            android:text="@string/fr_settings_dbx_login"
+            android:textColor="@android:color/white"
+            app:font="@string/font_roboto_medium" />
+
+        <com.softteco.roadlabpro.view.CustomButton
+            android:enabled="false"
+            android:id="@+id/fr_settings_btn_sync"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_blue_selected"
+            android:text="@string/title_fr_settings_load_data_to_dropbox"
+            android:textColor="@android:color/white"
+            app:font="@string/font_roboto_medium" />
+
+        <com.softteco.roadlabpro.view.CustomButton
+            android:id="@+id/fr_settings_btn_reset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_blue_selected"
+            android:text="@string/title_fr_settings_reset"
+            android:textColor="@android:color/white"
+            app:font="@string/font_roboto_medium"/>
+
+    </LinearLayout>
+</ScrollView>

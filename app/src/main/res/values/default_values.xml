@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="minSpeed" type="dimen" format="float">15.0</item>
+    <item name="maxSpeed" type="dimen" format="float">130.0</item>
+    <item name="RoadIntervalLength" type="dimen" format="float">100.0</item>
+    <item name="deltaQualityTime" type="dimen" format="float">10.0</item>
+    <item name="Quality1" type="dimen" format="float">2.0</item>
+    <item name="Quality2" type="dimen" format="float">4.0</item>
+    <item name="Quality3" type="dimen" format="float">6.0</item>
+    <item name="deltaBumpTime" type="dimen" format="float">10.0</item>
+    <item name="filterAcceleration" type="dimen" format="float">0.0</item>
+    <item name="bumpAcceleration" type="dimen" format="float">20.0</item>
+    <item name="deltaTime" type="dimen" format="float">1.0</item>
+    <item name="deltaAngle" type="dimen" format="float">5.0</item>
+</resources>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/type_issue_blue"
+    android:orientation="vertical">
+
+    <com.softteco.roadlabpro.view.TypefaceTextView
+        android:visibility="gone"
+        android:id="@+id/navigation_drawer_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:font="@string/font_roboto_bold"
+        android:layout_marginLeft="16dp"
+        android:paddingTop="@dimen/menu_item_padding"
+        android:textColor="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/navigation_project_name_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:font="@string/font_roboto_bold"
+            android:layout_marginLeft="16dp"
+            android:paddingTop="@dimen/menu_item_padding"
+            android:text="@string/title_menu_header_project"
+            android:textColor="@android:color/white" />
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/navigation_drawer_prject_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:font="@string/font_roboto_medium"
+            android:layout_marginLeft="16dp"
+            android:paddingTop="@dimen/menu_item_padding"
+            android:text="E95"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/navigation_road_name_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:font="@string/font_roboto_bold"
+            android:layout_marginLeft="16dp"
+            android:paddingTop="@dimen/menu_item_padding"
+            android:text="@string/title_menu_header_road"
+            android:textColor="@android:color/white" />
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/navigation_drawer_road_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:font="@string/font_roboto_medium"
+            android:layout_marginLeft="16dp"
+            android:paddingTop="@dimen/menu_item_padding"
+            android:text="E95"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            app:font="@string/font_roboto_bold"
+            android:paddingBottom="@dimen/menu_item_padding"
+            android:paddingTop="@dimen/menu_item_padding"
+            android:text="@string/title_menu_header_distance"
+            android:textColor="@android:color/white" />
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/navigation_drawer_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:font="@string/font_roboto_medium"
+            android:layout_marginLeft="16dp"
+            android:paddingBottom="@dimen/menu_item_padding"
+            android:paddingTop="@dimen/menu_item_padding"
+            android:text="500km"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</LinearLayout>

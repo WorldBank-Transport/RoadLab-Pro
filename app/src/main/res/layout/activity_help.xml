@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:weightSum="1"
+    tools:context="com.softteco.roadlabpro.activity.HelpActivity">
+
+    <FrameLayout
+        android:id="@+id/skip_cont"
+        android:layout_width="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <ImageButton
+            android:id="@+id/ac_help_bnt_skip"
+            android:layout_width="@dimen/help_activity_skip_btn_height"
+            android:layout_height="@dimen/help_activity_skip_btn_height"
+            android:scaleType="centerInside"
+            android:layout_gravity="right|top"
+            android:src="@drawable/ac_help_bnt_skip"
+            android:background="@drawable/black_selectable_bgr"
+            android:textColor="@android:color/black" />
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/help_lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/skip_cont"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:text="@string/help_lable_how"
+        android:textColor="@android:color/black"
+        android:textSize="22dp" />
+
+    <LinearLayout
+        android:id="@+id/cont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/help_lable"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/ac_help_pager"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/help_step_lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cont"
+        android:layout_centerHorizontal="true"
+        android:text="Step 1."
+        android:textColor="@color/gray_splash"
+        android:textSize="16dp" />
+
+    <ScrollView
+        android:id="@+id/help_description_scroll"
+        android:layout_below="@+id/help_step_lable"
+        android:layout_above="@+id/ac_help_indicator"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/help_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dip"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="16dp" />
+    </ScrollView>
+
+
+    <ImageButton
+        android:id="@+id/button_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/button_add_new" />
+
+    <ImageView
+        android:id="@+id/arrow_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="55dp"
+        android:visibility="invisible"
+        android:layout_marginRight="76dp"
+        android:src="@drawable/step_two_arrow" />
+
+    <include
+        android:id="@+id/ac_help_indicator"
+        layout="@layout/tutorial_dots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp" />
+
+
+</RelativeLayout>

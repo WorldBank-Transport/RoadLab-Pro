@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="200dip" >
+
+        <ImageButton
+            android:id="@+id/add_new_project"
+            android:layout_width="@dimen/header_btns_height"
+            android:layout_height="@dimen/header_btns_height"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/black_selectable_bgr"
+            android:src="@drawable/white_plus"
+            android:text="@string/time_interval"
+            android:layout_margin="8dp" />
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/header_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_toLeftOf="@+id/add_new_project"
+            android:layout_alignParentTop="true"
+            app:font="@string/font_roboto_medium"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:text="@string/time_interval"
+            android:paddingLeft="10dp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/header_title"
+            android:id="@+id/dlg_divider_header"
+            android:background="@color/dialog_divider" />
+
+        <ListView
+            android:id="@+id/valuesList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dlg_divider_header"
+            android:textColor="@android:color/black"
+            android:listSelector="@drawable/black_selectable_bgr"
+            android:divider="@color/gray_divider"
+            android:dividerHeight="1px"
+            android:textSize="20sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+</FrameLayout>

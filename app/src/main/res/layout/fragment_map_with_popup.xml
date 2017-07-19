@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.softteco.roadlabpro.view.CustomMapView
+        android:id="@+id/fr_road_issue_mapview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/popup_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:padding="5dp"
+        android:background="@drawable/white_rect_fill"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/popup_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_map_bump_black"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_centerVertical="true" />
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/popup_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/popup_image"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_toEndOf="@+id/popup_image"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            app:font="@string/font_roboto_medium"/>
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/popup_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/popup_name"
+            android:textColor="@color/gray_splash"
+            android:textSize="15sp"
+            android:ellipsize="end"
+            android:layout_toRightOf="@+id/popup_image"
+            android:layout_alignWithParentIfMissing="true"
+            app:font="@string/font_roboto_regular" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dlg_voice_record_linear_layer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_below="@+id/dlg_voice_record_sync_state_divider_header"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="20dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingBottom="20dp"
+    android:paddingLeft="10dp"
+    android:paddingTop="20dp">
+
+    <RelativeLayout
+        android:id="@+id/recordControlsRelativeLayout"
+        style="@style/CircleVoiceLayout">
+
+        <com.softteco.roadlabpro.view.CircleImageView
+            style="@style/CircleImageView"
+            android:layout_centerInParent="true"
+            app:circleColor="@color/gray_voice_button"
+            app:circleRadius="30" />
+
+
+        <com.softteco.roadlabpro.view.CircleImageView
+            android:id="@+id/dialog_voice_stop_record"
+            style="@style/CircleImageView"
+            android:layout_centerInParent="true"
+            app:circleColor="@color/red_voice_button"
+            app:circleRadius="30" />
+
+        <com.softteco.roadlabpro.view.CircleImageView
+            android:id="@+id/dialog_voice_start_record"
+            style="@style/CircleImageView"
+            android:layout_centerInParent="true"
+            app:circleColor="@color/apptheme_color"
+            app:circleRadius="30" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/abc_ic_voice_search_api_mtrl_alpha" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/playControlsRelativeLayout"
+        style="@style/CircleVoiceLayout">
+
+        <com.softteco.roadlabpro.view.CircleImageView
+            style="@style/CircleImageView"
+            android:layout_centerInParent="true"
+            app:circleColor="@color/gray_voice_button"
+            app:circleRadius="30" />
+
+        <com.softteco.roadlabpro.view.CircleImageView
+            android:id="@+id/dialog_voice_play_record"
+            style="@style/CircleImageView"
+            android:layout_centerInParent="true"
+            app:circleColor="@color/apptheme_color"
+            android:clickable="false"
+            app:circleRadius="30" />
+
+        <ImageView
+            android:id="@+id/voice_record_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_action_media_play" />
+
+        <ImageView
+            android:id="@+id/voice_record_stop"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_action_media_stop" />
+
+    </RelativeLayout>
+
+</LinearLayout>

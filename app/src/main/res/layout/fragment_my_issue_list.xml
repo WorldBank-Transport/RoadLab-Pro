@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/fr_my_issue_list_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_search"
+            android:layout_gravity="center_vertical" />
+
+        <EditText
+            android:id="@+id/fr_my_issue_list_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="textFilter"
+            android:imeOptions="actionSearch"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imageButton"
+            android:layout_toRightOf="@+id/imageView2"
+            android:layout_toStartOf="@+id/imageButton"
+            android:background="@android:color/transparent"
+            android:hint="@string/title_search_edit_text"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/fr_my_issue_list_divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fr_my_issue_list_container"
+        android:background="@drawable/search_divider" />
+
+    <com.softteco.roadlabpro.view.SwipeMenuListView
+        android:id="@+id/fr_my_issue_list"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/fr_my_issue_list_divider"
+        android:layout_centerHorizontal="true"
+        android:divider="@drawable/default_divider_list" />
+
+</RelativeLayout>

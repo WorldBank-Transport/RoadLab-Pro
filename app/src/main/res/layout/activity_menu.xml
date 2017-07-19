@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.softteco.roadlabpro.activity.MainActivity" >
+
+    <Button
+        android:id="@+id/ac_menu_btn_run_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/ac_menu_run_test_click"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/ac_menu_start_stop_road_detection"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/ac_menu_btn_export_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/ac_menu_export_data_click"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/ac_menu_export_data"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_margin"
+    android:background="@android:color/white"
+    tools:context="com.softteco.quailityroadevent.fragment.DetailsIssueFragment">
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_below="@+id/showMap"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/measurementDateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                style="@style/IssueDetectionText" />
+
+            <TextView
+                android:id="@+id/runNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/IssueDetectionText"
+                android:text="@string/run_number_title" />
+
+            <TextView
+                android:id="@+id/roadSegmentIdText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/IssueDetectionText"
+                android:text="@string/road_segment_id_title" />
+
+            <TextView
+                android:id="@+id/selectedSpeedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/IssueDetectionText"
+                android:text="@string/max_speed_value_str" />
+
+            <TextView
+                android:id="@+id/distanceValue"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/IssueDetectionText"
+                android:layout_below="@+id/measurementDateTime" />
+
+            <TextView
+                android:id="@+id/averageSpeedValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/IssueDetectionText"
+                android:layout_below="@+id/distanceValue" />
+
+            <TextView
+                android:id="@+id/timeValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                style="@style/IssueDetectionText"
+                android:layout_below="@+id/averageSpeedValue" />
+
+            <Button
+                android:id="@+id/calculateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/timeValue"
+                android:text="@string/calculate_button_str" />
+
+            <TextView
+                android:id="@+id/number100mValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                style="@style/IssueDetectionText"
+                android:layout_below="@+id/calculateButton"
+                android:text="@string/number_100m_intervals_value_str" />
+
+            <TextView
+                android:id="@+id/numberBumpEvents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                style="@style/IssueDetectionText"
+                android:layout_below="@+id/number100mValue"
+                android:text="@string/number_bump_events_value_str" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/showListItems"
+        android:visibility="gone"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/showMap"
+        android:visibility="gone"
+        android:layout_below="@+id/showListItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/show_map"/>
+
+    <ListView
+        android:layout_below="@+id/showMap"
+        android:id="@+id/processedDataList"
+        android:listSelector="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        style="?android:attr/progressBarStyleLarge"
+        android:indeterminateOnly="true" />
+
+</RelativeLayout>

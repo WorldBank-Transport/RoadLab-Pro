@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <item type="string" name="font_roboto_regular">fonts/Roboto-Regular.ttf</item>
+    <item type="string" name="font_roboto_medium">fonts/Roboto-Medium.ttf</item>
+    <item type="string" name="font_roboto_light">fonts/Roboto-Light.ttf</item>
+    <item type="string" name="font_roboto_bold">fonts/Roboto-Bold.ttf</item>
+    <item type="string" name="font_roboto_black">fonts/Roboto-Black.ttf</item>
+    <item type="string" name="font_helvetica_neue_cyr_bold">fonts/HelveticaNeueCyr-Bold.otf</item>
+    <item type="string" name="font_helvetica_neue_cyr_roman">fonts/HelveticaNeueCyr-Roman.otf</item>
+
+</resources>

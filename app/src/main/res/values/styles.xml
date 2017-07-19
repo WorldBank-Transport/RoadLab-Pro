@@ -1,0 +1,81 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="CustomActionBarTheme">
+
+    </style>
+
+    <style name="CustomActionBarTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/grey_bg_panel</item>
+        <item name="colorPrimaryDark">@color/grey_bg_panel</item>
+        <item name="colorAccent">@color/black_overlay</item>
+        <item name="actionBarStyle">@style/MyActionBar</item>
+    </style>
+
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.ActionBar.Solid">
+        <item name="colorPrimary">@color/grey_bg_panel</item>
+        <item name="colorPrimaryDark">@color/grey_bg_panel</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="titleTextStyle">@style/MyTitleTextStyle</item>
+    </style>
+
+    <style name="MyTitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="android:Theme.NoTitleBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">@style/ButtonBar</item>
+        <item name="metaButtonBarButtonStyle">@style/ButtonBarButton</item>
+    </style>
+
+    <!-- Backward-compatible version of ?android:attr/buttonBarStyle -->
+    <style name="ButtonBar">
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:background">@android:drawable/bottom_bar</item>
+    </style>
+
+    <!-- Backward-compatible version of ?android:attr/buttonBarButtonStyle -->
+    <style name="ButtonBarButton" />
+
+    <style name="CircleImageView">
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:layout_height">65dp</item>
+        <item name="android:layout_width">65dp</item>
+    </style>
+
+    <style name="CircleImageViewInTagList">
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_width">40dp</item>
+    </style>
+
+    <style name="CircleOutImageView">
+        <item name="android:visibility">invisible</item>
+        <item name="android:layout_height">75dp</item>
+        <item name="android:layout_width">75dp</item>
+    </style>
+
+    <style name="CircleLayout">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_width">70dp</item>
+    </style>
+
+    <style name="CircleLayoutInTagList">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">50dp</item>
+    </style>
+
+    <style name="CircleVoiceLayout" parent="CircleLayout">
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+
+    </style>
+
+</resources>

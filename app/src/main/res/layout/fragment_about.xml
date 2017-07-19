@@ -1,0 +1,158 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/infoContentLayout"
+        android:layout_above="@+id/cont_bottom"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/about_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="48dp"
+                android:src="@drawable/ic_about" />
+
+            <com.softteco.roadlabpro.view.TypefaceTextView
+                android:id="@+id/about_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:font="@string/font_roboto_black"
+                android:layout_below="@+id/about_logo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="28dp"
+                android:text="@string/app_name"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/black"
+                android:textSize="24dp" />
+
+            <com.softteco.roadlabpro.view.TypefaceTextView
+                android:id="@+id/about_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:font="@string/font_roboto_regular"
+                android:layout_below="@+id/about_1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/app_description"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/black" />
+
+
+            <com.softteco.roadlabpro.view.TypefaceTextView
+                android:id="@+id/fr_about_title_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:font="@string/font_roboto_regular"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="18dp"
+                android:text="@string/title_fr_about_version"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/gray_about"
+                android:layout_below="@+id/about_2"
+                android:layout_centerHorizontal="true" />
+
+            <com.softteco.roadlabpro.view.TypefaceTextView
+                android:id="@+id/fr_about_app_better"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:font="@string/font_roboto_regular"
+                android:layout_above="@+id/cont_bottom"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="32dp"
+                android:layout_marginTop="76dp"
+                android:gravity="center"
+                android:text="@string/title_fr_about_app_better"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/gray_about"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/cont_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+<!--        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_divider" />
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/fr_about_privacy_policy"
+            android:layout_width="match_parent"
+            app:font="@string/font_roboto_medium"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:padding="6dp"
+            android:gravity="center"
+            android:text="@string/title_fr_about_privacy_policy"
+            android:background="@drawable/black_selectable_bgr"
+            android:textColor="@color/blue_about"
+            android:textSize="14dp" />-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_divider" />
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/fr_about_show_app_manual"
+            android:layout_width="match_parent"
+            app:font="@string/font_roboto_medium"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:padding="6dp"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:text="@string/title_fr_about_show_app_manual"
+            android:background="@drawable/black_selectable_bgr"
+            android:textColor="@color/blue_about"
+            android:textSize="14dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_divider" />
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/fr_about_show_tutorial"
+            android:layout_width="match_parent"
+            app:font="@string/font_roboto_medium"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:padding="6dp"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:text="@string/title_fr_about_show_tutorial"
+            android:background="@drawable/black_selectable_bgr"
+            android:textColor="@color/blue_about"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

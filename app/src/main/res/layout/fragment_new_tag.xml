@@ -1,0 +1,366 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="com.softteco.roadlabpro.fragment.NewTagFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="10dp">
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/fr_new_tag_road_unique_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="50"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:text="@string/title_fr_new_road_unique_id"
+            android:textColor="@color/gray_splash"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:font="@string/font_roboto_medium" />
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/fr_new_tag_road_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fr_new_tag_road_unique_id"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="50"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:text="@string/title_fr_new_road_condition"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:font="@string/font_roboto_bold" />
+
+        <LinearLayout
+            android:id="@+id/fr_new_tag_road_condition_images"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fr_new_tag_road_condition"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout style="@style/CircleLayout">
+
+                <com.softteco.roadlabpro.view.CircleImageView
+                    android:id="@+id/fr_new_tag_green_circle_border"
+                    style="@style/CircleOutImageView"
+                    app:circleColor="@android:color/darker_gray"
+                    app:circleRadius="34" />
+
+                <com.softteco.roadlabpro.view.CircleImageView
+                    android:id="@+id/fr_new_tag_green_circle"
+                    style="@style/CircleImageView"
+                    app:circleColor="@color/chart_perfect_roads_color"
+                    app:circleRadius="30" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <RelativeLayout style="@style/CircleLayout">
+
+                <com.softteco.roadlabpro.view.CircleImageView
+                    android:id="@+id/fr_new_tag_yellow_circle_border"
+                    style="@style/CircleOutImageView"
+                    app:circleColor="@android:color/darker_gray"
+                    app:circleRadius="34" />
+
+                <com.softteco.roadlabpro.view.CircleImageView
+                    android:id="@+id/fr_new_tag_yellow_circle"
+                    style="@style/CircleImageView"
+                    app:circleColor="@color/chart_good_roads_color"
+                    app:circleRadius="30" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <RelativeLayout style="@style/CircleLayout">
+                <com.softteco.roadlabpro.view.CircleImageView
+                    android:id="@+id/fr_new_tag_orange_circle_border"
+                    style="@style/CircleOutImageView"
+                    app:circleColor="@android:color/darker_gray"
+                    app:circleRadius="34" />
+                <com.softteco.roadlabpro.view.CircleImageView
+                    android:id="@+id/fr_new_tag_orange_circle"
+                    style="@style/CircleImageView"
+                    app:circleColor="@color/chart_normal_roads_color"
+                    app:circleRadius="30" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <RelativeLayout style="@style/CircleLayout">
+                <com.softteco.roadlabpro.view.CircleImageView
+                    android:id="@+id/fr_new_tag_red_circle_border"
+                    style="@style/CircleOutImageView"
+                    app:circleColor="@android:color/darker_gray"
+                    app:circleRadius="34" />
+                <com.softteco.roadlabpro.view.CircleImageView
+                    android:id="@+id/fr_new_tag_red_circle"
+                    style="@style/CircleImageView"
+                    app:circleColor="@color/chart_bad_roads_color"
+                    app:circleRadius="30" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/fr_new_tag_road_selected_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fr_new_tag_road_condition_images"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="50"
+            android:paddingLeft="10dp"
+            android:text="@string/title_fr_new_road_selected_condition"
+            android:textColor="@color/gray_splash"
+            android:textSize="16sp"
+            app:font="@string/font_roboto_medium" />
+
+        <LinearLayout
+            android:id="@+id/fr_report_title_photos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fr_new_tag_road_selected_condition"
+            android:orientation="horizontal">
+
+            <com.softteco.roadlabpro.view.TypefaceTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="50"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:text="@string/title_fr_new_tag_pictures"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:font="@string/font_roboto_bold" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/fr_report_main_photo_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/fr_report_title_photos"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/fr_report_issue_add_photo_one"
+                layout="@layout/report_issue_photo"
+                android:layout_width="80dp"
+                android:layout_height="80dp" />
+
+            <include
+                android:id="@+id/fr_report_issue_add_photo_two"
+                layout="@layout/report_issue_photo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <include
+                android:id="@+id/fr_report_issue_add_photo_three"
+                layout="@layout/report_issue_photo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true" />
+        </RelativeLayout>
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/title_fr_new_tag_voice_comment_text_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/fr_report_main_photo_layout"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:text="@string/title_fr_new_tag_voice_comment"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:font="@string/font_roboto_bold" />
+
+        <include layout="@layout/new_tag_gray_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@+id/title_fr_new_tag_voice_comment_text_id"
+            android:id="@+id/add_voice_comment_custom_view">
+
+        </include>
+
+        <include layout="@layout/new_tag_voice_added"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_fr_new_tag_voice_comment_text_id"
+            android:id="@+id/add_voice_comment_custom_view_voice_added"
+            android:layout_alignBottom="@+id/add_voice_comment_custom_view"
+            android:layout_alignEnd="@+id/add_voice_comment_custom_view">
+        </include>
+
+
+        <EditText
+            android:inputType="numberDecimal"
+            android:id="@+id/fr_report_add_iri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/add_voice_comment_custom_view"
+            android:background="@drawable/line_location_notes"
+            android:hint="@string/title_fr_new_tag_add_iri"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black" />
+
+        <EditText
+            android:id="@+id/fr_report_add_notes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/fr_report_add_iri"
+            android:background="@drawable/line_location_notes"
+            android:hint="@string/title_fr_new_tag_add_notes"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black" />
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fr_report_add_notes">
+
+            <com.softteco.roadlabpro.view.TypefaceTextView
+                android:id="@+id/fr_report_value_geo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/fr_report_choose_location"
+                android:layout_toStartOf="@+id/fr_report_choose_location"
+                android:background="@drawable/line_location_notes"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="20dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/black"
+                app:font="fonts/Roboto-Regular.ttf" />
+
+            <ImageButton
+                android:id="@+id/fr_report_choose_location"
+                android:layout_width="@dimen/report_issues_gps_btn_height"
+                android:layout_height="@dimen/report_issues_gps_btn_height"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dip"
+                android:background="@drawable/black_selectable_bgr"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_blue_location_selected" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+
+            <com.softteco.roadlabpro.view.TypefaceTextView
+                android:id="@+id/fr_report_value_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/fr_report_value_geo"
+                android:layout_alignStart="@+id/fr_report_value_geo"
+                android:layout_below="@+id/fr_report_value_geo"
+                android:layout_toLeftOf="@+id/fr_report_add_photo_three"
+                android:layout_toStartOf="@+id/fr_report_add_photo_three"
+                android:layout_weight="1"
+                android:background="@drawable/line_datetime_type"
+                android:padding="5dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/black"
+                app:font="fonts/Roboto-Regular.ttf" />
+
+            <com.softteco.roadlabpro.view.TypefaceTextView
+                android:id="@+id/fr_report_value_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/fr_report_value_date"
+                android:layout_alignEnd="@+id/fr_report_value_geo"
+                android:layout_alignRight="@+id/fr_report_value_geo"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@+id/fr_report_value_date"
+                android:layout_weight="1"
+                android:background="@drawable/line_datetime_type"
+                android:padding="5dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/black"
+                app:font="fonts/Roboto-Regular.ttf" />
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+</ScrollView>
+

@@ -1,0 +1,235 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/fr_details_image_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="60"
+            android:background="@android:color/white" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/fr_details_prev_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_left"
+                android:layout_alignTop="@+id/fr_details_next_image"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp" />
+
+            <ImageView
+                android:id="@+id/fr_details_next_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_right"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp" />
+
+            <com.softteco.roadlabpro.view.TypefaceTextView
+                android:id="@+id/fr_details_count_photos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:font="fonts/Roboto-Regular.ttf"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/fr_details_next_image"
+                android:layout_toRightOf="@+id/fr_details_prev_image"
+                android:layout_toEndOf="@+id/fr_details_prev_image"
+                android:layout_alignWithParentIfMissing="false"
+                android:gravity="center_vertical|center_horizontal"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:id="@+id/fr_details_scroll"
+        android:layout_weight="50"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="40"
+            android:background="@android:color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            tools:context="com.softteco.roadlabpro.fragment.DetailsIssueFragment">
+
+            <com.softteco.roadlabpro.view.TypefaceTextView
+                android:id="@+id/fr_details_title_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_fr_new_road_condition"
+                app:font="fonts/Roboto-Regular.ttf"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp" />
+
+            <com.softteco.roadlabpro.view.TypefaceTextView
+                android:id="@+id/fr_details_value_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HAZARD"
+                app:font="fonts/Roboto-Bold.ttf"
+                android:textAllCaps="true"
+                android:textColor="@color/type_issue_blue"
+                android:layout_below="@+id/fr_details_title_type"
+                android:layout_alignLeft="@+id/fr_details_title_type"
+                android:layout_alignStart="@+id/fr_details_title_type"
+                android:textSize="20sp"
+                android:layout_marginTop="5dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fr_details_value_type"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/linearLayout2">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50">
+
+                    <com.softteco.roadlabpro.view.TypefaceTextView
+                        android:id="@+id/fr_details_title_reported"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reported"
+                        app:font="fonts/Roboto-Regular.ttf"
+                        android:textColor="@android:color/darker_gray"
+                        android:layout_below="@+id/fr_details_value_type"
+                        android:layout_alignLeft="@+id/fr_details_value_type"
+                        android:layout_alignStart="@+id/fr_details_value_type" />
+
+                    <com.softteco.roadlabpro.view.TypefaceTextView
+                        android:id="@+id/fr_details_value_reported"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12-12-2015    15.45"
+                        app:font="fonts/Roboto-Regular.ttf"
+                        android:textColor="@android:color/black"
+                        android:layout_above="@+id/fr_details_title_notes"
+                        android:layout_alignLeft="@+id/fr_details_title_reported"
+                        android:layout_alignStart="@+id/fr_details_title_reported"
+                        android:gravity="left" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50">
+
+                    <com.softteco.roadlabpro.view.TypefaceTextView
+                        android:id="@+id/fr_details_title_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/location"
+                        app:font="fonts/Roboto-Regular.ttf"
+                        android:textColor="@android:color/darker_gray"
+                        android:layout_above="@+id/fr_details_value_location"
+                        android:layout_alignRight="@+id/fr_details_value_location"
+                        android:layout_alignEnd="@+id/fr_details_value_location"
+                        android:layout_gravity="right" />
+
+                    <com.softteco.roadlabpro.view.TypefaceTextView
+                        android:id="@+id/fr_details_value_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="57.342345, 27.411455"
+                        android:textColor="@android:color/black"
+                        android:layout_below="@+id/fr_details_title_reported"
+                        android:layout_alignRight="@+id/fr_details_value_notes"
+                        android:layout_alignEnd="@+id/fr_details_value_notes"
+                        android:layout_gravity="right"
+                        android:gravity="right" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.softteco.roadlabpro.view.TypefaceTextView
+                android:id="@+id/fr_details_title_notes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notes"
+                app:font="fonts/Roboto-Regular.ttf"
+                android:textColor="@android:color/darker_gray"
+                android:layout_below="@+id/linearLayout2"
+                android:layout_alignLeft="@+id/linearLayout2"
+                android:layout_alignStart="@+id/linearLayout2"
+                android:layout_marginTop="20dp" />
+
+            <com.softteco.roadlabpro.view.TypefaceTextView
+                android:id="@+id/fr_details_value_notes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:font="fonts/Roboto-Regular.ttf"
+                android:text="Huge road hole just on the driving way. Because of the road turning teh hole is not visible until it because quite difficult to avoid getting into it."
+                android:textColor="@android:color/black"
+                android:layout_below="@+id/fr_details_title_notes"
+                android:layout_alignLeft="@+id/fr_details_title_notes"
+                android:layout_alignStart="@+id/fr_details_title_notes"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp" />
+
+            <com.softteco.roadlabpro.view.TypefaceTextView
+                android:id="@+id/fr_details_voice_comments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="@string/title_fr_new_tag_voice_comment"
+                app:font="fonts/Roboto-Regular.ttf"
+                android:textColor="@android:color/darker_gray"
+                android:layout_below="@+id/fr_details_value_notes"
+                android:layout_alignLeft="@+id/linearLayout2"
+                android:layout_alignStart="@+id/linearLayout2"
+                android:layout_marginTop="20dp" />
+
+            <include
+                android:id="@+id/record_controls_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_below="@+id/fr_details_voice_comments"
+                android:layout_alignLeft="@+id/linearLayout2"
+                android:layout_alignStart="@+id/linearLayout2"
+                layout="@layout/voice_record_linear_layer" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

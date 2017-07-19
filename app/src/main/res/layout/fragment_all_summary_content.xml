@@ -1,0 +1,351 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@android:color/white">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="10dip">
+
+    <ImageView
+        android:id="@+id/wrong_angle_icon"
+        android:layout_width="@dimen/summary_btns_height"
+        android:layout_height="@dimen/summary_btns_height"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dip"
+        android:layout_marginTop="15dip"
+        android:clickable="true"
+        android:src="@drawable/btn_device_green_selector"></ImageView>
+
+    <ImageView
+        android:id="@+id/wrong_gps_icon"
+        android:layout_width="@dimen/summary_btns_height"
+        android:layout_height="@dimen/summary_btns_height"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="15dip"
+        android:clickable="true"
+        android:src="@drawable/btn_gps_green_selector"></ImageView>
+
+    <LinearLayout
+        android:id="@+id/recordStatusLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="15dip"
+        android:layout_toLeftOf="@+id/wrong_gps_icon"
+        android:layout_toRightOf="@+id/wrong_angle_icon"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/speedText"
+            android:layout_width="@dimen/chart_size"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:singleLine="false"
+            android:text="@string/summary_speed_text"
+            android:textColor="@android:color/secondary_text_light_nodisable"
+            android:textSize="16dip"
+            app:font="@string/font_roboto_bold" />
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/speedValueText"
+            android:layout_width="@dimen/chart_size"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:gravity="center"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:textColor="@android:color/black"
+            android:textSize="18dip"
+            app:font="@string/font_roboto_bold" />
+
+    </LinearLayout>
+
+    <com.softteco.roadlabpro.view.TypefaceTextView
+        android:id="@+id/recordStatusValue"
+        android:layout_width="@dimen/chart_size"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/graphLayout"
+        android:layout_alignLeft="@+id/graphLayout"
+        android:layout_alignRight="@+id/graphLayout"
+        android:layout_alignStart="@+id/graphLayout"
+        android:layout_below="@+id/recordStatusLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/summary_data_collection_status_off_text"
+        android:textColor="@android:color/black"
+        android:textSize="20dip"
+        app:font="@string/font_roboto_bold" />
+
+    <View
+        android:id="@+id/divider0"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_above="@+id/graphLayout"
+        android:layout_marginBottom="0dip"
+        android:layout_marginTop="5dip"
+        android:background="@color/gray_divider" />
+
+    <FrameLayout
+        android:id="@+id/graphLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/recordStatusValue">
+
+        <com.softteco.roadlabpro.view.CustomMapView
+            android:id="@+id/fr_road_issue_mapview"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/summary_map_size" />
+
+    </FrameLayout>
+
+    <include layout="@layout/quality_statistics_layout"
+        android:id="@+id/qualityStatisticsLayout"
+        android:visibility="gone"
+        android:layout_marginTop="0dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/graphLayout"
+        android:layout_centerHorizontal="true" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/qualityStatisticsLayout"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="0dip"
+        android:background="@color/gray_divider" />
+
+    <LinearLayout
+        android:id="@+id/roughnessInfoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/divider1"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/roadIntervalText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_weight="65"
+            android:text="@string/summary_roughness_of_past_100m_str"
+            android:textColor="@android:color/secondary_text_light_nodisable"
+            android:textSize="16dip"
+            app:font="@string/font_roboto_regular" />
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/roadIntervalValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toEndOf="@+id/roadIntervalText"
+            android:layout_toRightOf="@+id/roadIntervalText"
+            android:layout_weight="35"
+            android:background="@drawable/interval_bg"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/summary_none_text"
+            android:textColor="@android:color/white"
+            android:textSize="16dip"
+            app:font="@string/font_roboto_regular" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bumpsInfoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="false"
+        android:layout_below="@+id/roughnessInfoLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/bumpText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_weight="65"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/summary_bumps_potholes_str"
+            android:textColor="@android:color/secondary_text_light_nodisable"
+            android:textSize="16dip"
+            app:font="@string/font_roboto_regular" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="35">
+
+            <com.softteco.roadlabpro.view.TypefaceTextView
+                android:id="@+id/bumpValueText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_weight="35"
+                android:background="@drawable/bump_count_bg"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#ffc00000"
+                android:textSize="20dip"
+                app:font="@string/font_roboto_regular"
+                android:layout_gravity="left|center_vertical" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/distanceInfoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/bumpsInfoLayout"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/distanceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/summary_distance_evaluated_text"
+            android:textColor="@android:color/secondary_text_light_nodisable"
+            android:textSize="16dip"
+            app:font="@string/font_roboto_bold" />
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/distanceValueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="18dip"
+            app:font="@string/font_roboto_bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/itemsCntInfoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/distanceInfoLayout"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/itemsCntText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Last Interval data count:"
+            android:textColor="@android:color/secondary_text_light_nodisable"
+            android:textSize="16dip"
+            app:font="@string/font_roboto_bold" />
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/itemsCntValueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="18dip"
+            app:font="@string/font_roboto_bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/intervalsCntInfoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/itemsCntInfoLayout"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/intervalsCntText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Intervals count:"
+            android:textColor="@android:color/secondary_text_light_nodisable"
+            android:textSize="16dip"
+            app:font="@string/font_roboto_bold" />
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/intervalsCntValueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="18dip"
+            app:font="@string/font_roboto_bold" />
+    </RelativeLayout>
+
+    <com.softteco.roadlabpro.view.CustomButton
+        android:id="@+id/startMeasurementsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/intervalsCntInfoLayout"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="10dip"
+        android:layout_marginBottom="10dip"
+        android:background="@drawable/button_blue_selected"
+        android:textColor="@android:color/white"
+        android:visibility="gone"
+        app:font="@string/font_roboto_medium" />
+
+</RelativeLayout>
+</ScrollView>

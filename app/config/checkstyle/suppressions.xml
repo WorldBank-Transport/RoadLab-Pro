@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suppressions PUBLIC
+    "-//Puppy Crawl//DTD Suppressions 1.0//EN"
+    "http://www.puppycrawl.com/dtds/suppressions_1_0.dtd">
+<suppressions>
+	<suppress checks="VisibilityModifier" files="\s*Dto.java"/>
+	<suppress checks="VisibilityModifier" files="\s*dto\s*"/>
+        <suppress checks="[a-zA-Z0-9]*" files="(R|ITelephony)\.java"/>
+</suppressions>

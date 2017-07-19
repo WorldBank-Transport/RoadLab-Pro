@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <com.softteco.roadlabpro.view.TypefaceTextView
+        android:id="@+id/dlg_voice_record_header_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="20dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:text="@string/synchronize"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:font="@string/font_roboto_medium" />
+
+    <ImageView
+        android:id="@+id/dlg_voice_record_sync_state_divider_header"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/dlg_voice_record_header_title"
+        android:layout_centerHorizontal="true"
+        android:background="@color/dialog_divider" />
+
+    <include layout="@layout/voice_record_linear_layer" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/dlg_voice_record_linear_layer"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <com.softteco.roadlabpro.view.CustomButton
+            android:enabled="false"
+            android:id="@+id/dlg_voice_record_id_btn_save"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="5dp"
+            android:layout_weight="50"
+            android:background="@drawable/button_blue_selected"
+            android:text="@string/save"
+            android:textColor="@android:color/white"
+            app:font="@string/font_roboto_medium" />
+
+        <com.softteco.roadlabpro.view.CustomButton
+            android:id="@+id/dlg_voice_record_id_btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="50"
+            android:background="@drawable/button_blue_selected"
+            android:text="@string/cancel_btn_txt"
+            android:textColor="@android:color/white"
+            app:font="@string/font_roboto_medium" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,135 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.softteco.roadlabpro.view.CustomMapView
+        android:id="@+id/fr_road_issue_mapview"
+        android:layout_width="match_parent"
+        android:layout_height="300dip" />
+
+    <RelativeLayout
+        android:id="@+id/distanceInfoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/fr_road_issue_mapview"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/distanceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/summary_distance_evaluated_text"
+            android:textColor="@android:color/secondary_text_light_nodisable"
+            android:textSize="16dip"
+            app:font="@string/font_roboto_bold" />
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/distanceValueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="18dip"
+            app:font="@string/font_roboto_bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/itemsCntInfoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/distanceInfoLayout"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/itemsCntText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Last Interval data count:"
+            android:textColor="@android:color/secondary_text_light_nodisable"
+            android:textSize="16dip"
+            app:font="@string/font_roboto_bold" />
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/itemsCntValueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="18dip"
+            app:font="@string/font_roboto_bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/intervalsCntInfoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/itemsCntInfoLayout"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/intervalsCntText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Intervals count:"
+            android:textColor="@android:color/secondary_text_light_nodisable"
+            android:textSize="16dip"
+            app:font="@string/font_roboto_bold" />
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/intervalsCntValueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="18dip"
+            app:font="@string/font_roboto_bold" />
+    </RelativeLayout>
+
+    <com.softteco.roadlabpro.view.CustomButton
+        android:id="@+id/startMeasurementsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/intervalsCntInfoLayout"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="10dip"
+        android:layout_marginBottom="10dip"
+        android:background="@drawable/button_blue_selected"
+        android:textColor="@android:color/white"
+        android:visibility="gone"
+        app:font="@string/font_roboto_medium" />
+
+</RelativeLayout>
+</ScrollView>

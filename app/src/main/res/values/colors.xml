@@ -1,0 +1,41 @@
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="default_selector">#66CCCCCC</color>
+    <color name="link_clicked">#670000FF</color>
+    <color name="transparent_black">#2F000000</color>
+    <color name="hint_color">#aaa</color>
+    <color name="listview_bg">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="action_bar_bg">#263238</color>
+    <color name="search_map_bg">#E6FFFFFF</color>
+    <color name="gray_divider">#e1e1e1</color>
+    <color name="gray_splash">#989b9d</color>
+    <color name="type_issue_blue">#2196f3</color>
+    <color name="gray_about">#b8b8b8</color>
+    <color name="gray_disable_button">#b8b8b8</color>
+    <color name="gray_voice_button">#b8b8b8</color>
+    <color name="red_voice_button">#ffc00000</color>
+    <color name="blue_about">#2196f3</color>
+    <color name="grey_bg_panel">#333232</color>
+
+    <color name="green_sync_icon">#46a14a</color>
+    <color name="slash_description">#8Ae1e1e1</color>
+
+<!--
+    <color name="chart_normal_roads_color">#f3ba21</color>
+    <color name="chart_good_roads_color">#20d0a0</color>
+    <color name="chart_bad_roads_color">#2196f3</color>
+    <color name="chart_perfect_roads_color">#3054a4</color>
+-->
+
+    <color name="chart_bad_roads_color">#ff8c1515</color>
+    <color name="chart_normal_roads_color">#ffdeb245</color>
+    <color name="chart_good_roads_color">#ffb0c634</color>
+    <color name="chart_perfect_roads_color">#ff297e2b</color>
+    <color name="chart_none_roads_color">#b8b8b8</color>
+
+    <color name="dialog_divider">#FF4293FE</color>
+    <color name="bumps_color">#ffc00000</color>
+
+</resources>

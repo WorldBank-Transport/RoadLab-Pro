@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="settings_values">
+        <item>minSpeed: %1$s km/h</item>
+        <item>maxSpeed: %1$s km/h</item>
+        <item>RoadIntervalLength: %1$s m</item>
+
+        <item>deltaQualityTime: %1$s s</item>
+        <item>Quality1: %1$s &#xff05;</item>
+        <item>Quality2: %1$s &#xff05;</item>
+        <item>Quality3: %1$s &#xff05;</item>
+
+        <item>deltaBumpTime: %1$s s</item>
+        <item>filterAcceleration: %1$s &#xff05;</item>
+        <item>bumpAcceleration: %1$s &#xff05;</item>
+        <item>deltaTime: %1$s s</item>
+        <item>deltaAngle: %1$s degree</item>
+    </string-array>
+
+    <string-array name="road_condition_values">
+        <item>Excellent</item>
+        <item>Good</item>
+        <item>Fair</item>
+        <item>Poor</item>
+        <item>None</item>
+    </string-array>
+
+    <string-array name="settings_hints">
+        <item>The minimum speed of the car in which the measurements are considered valid</item>
+        <item>The maximum speed of the car in which the measurements are considered valid</item>
+        <item>Discrete value of the interval length </item>
+
+        <item>Minimum time discrete value</item>
+        <item>The threshold value of the standard deviation of excellent quality road </item>
+        <item>The threshold value of the standard deviation of good quality road </item>
+        <item>The threshold value of the standard deviation of satisfactory quality road </item>
+
+        <item>Minimum time discrete value for calculation to determine the bump event</item>
+        <item>The data value for the minimum value filter. As a percentage of the gravity vector</item>
+        <item>Acceleration value at which bump event is determined. As a percentage of the gravity vector</item>
+        <item>Minimum time discrete value for calculation to detrmine rotation</item>
+        <item>The minimum change in the angle of the vector of gravity below which it is believed that data is valid</item>
+    </string-array>
+
+    <string-array name="popup_hints">
+        <item>Run number (Experiment Order)</item>
+        <item>Road Segment ID</item>
+        <item>Speed</item>
+    </string-array>
+
+    <string-array name="device_settings_common_hints">
+        <item>Vehicle ID</item>
+        <item>Android ID </item>
+        <item>Keep screen on during testing</item>
+        <item>Sync mode setup</item>
+        <item>Start road roughness detection automatically</item>
+        <item>Select sync data provider</item>
+    </string-array>
+
+    <string-array name="device_settings_common_values">
+        <item>Vehicle ID</item>
+        <item>Android ID </item>
+        <item>Screen always on</item>
+        <item>Synchronization</item>
+        <item>Automatic detection</item>
+        <item>Sync data provider</item>
+    </string-array>
+
+    <string-array name="popup_numbers">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="popup_speed">
+        <item>40</item>
+        <item>60</item>
+        <item>80</item>
+        <item>100</item>
+    </string-array>
+
+    <string-array name="sync_mode">
+        <item>Automatically</item>
+        <item>Wifi only</item>
+        <item>Manual sync</item>
+    </string-array>
+
+    <string-array name="help_pager_item">
+        <item>Find a road condition issue \n on your way you want to report</item>
+        <item>Tap on (+) button in the right bottom corner \n of the app screen</item>
+        <item>Use your mobile phone camera to take \n some photos of the issue</item>
+        <item>Provide issue details: select type of the issue \n and add notes to correctly report it</item>
+        <item>View and track your reported issue \n on a street map</item>
+        <item>Setup your smartphone on a car cradle VERTICALLY (preferred) or put it on the flat dashboard for evaluation</item>
+        <item>Get results in real-time while driving by using automatic roughness evaluation</item>
+        <item>Review current evaluation results or all time results</item>
+        <!-- <item>Report your fist issue now!</item> -->
+    </string-array>
+
+</resources>

@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RoadLab Pro</string>
+    <string name="action_settings">Settings</string>
+    <string name="device_shaken">Device shaken!</string>
+    <string name="app_description">App for road condition reporting</string>
+    <string name="ac_menu_start_stop_road_detection">Algorithm for road condition detection</string>
+    <string name="ac_menu_export_data">Export of data to spreadsheet</string>
+    <string name="print_send_email_subject">Quality road</string>
+    <string name="title_menu_add_new_issue">Add New Issue</string>
+    <string name="title_menu_issue_detection">Issue Detection</string>
+    <string name="title_menu_my_records">My Records</string>
+    <string name="title_menu_settings">Settings</string>
+    <string name="title_menu_about">About</string>
+    <string name="title_menu_measurement">Links</string>
+    <string name="title_menu_new_line_measurement">Measurement</string>
+    <string name="title_issue_detection">Issue Detection</string>
+    <string name="title_my_records">My Records</string>
+    <string name="title_my_records_details">My Record Details</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_user_manual">Application manual</string>
+    <string name="title_alg_settings">Algorithm Settings</string>
+    <string name="title_about">About</string>
+    <string name="start_recording">START</string>
+    <string name="stop_recording">STOP</string>
+    <string name="default_folder_name">Default project</string>
+    <string name="default_road_name">Default road</string>
+
+    <string name="sync_data_save_local">The data is stored locally. Synchronization is disabled.</string>
+    <string name="sync_data_start_issue_problems">Launched synchronize data.</string>
+    <string name="sync_data_succeed">Syncing data with Server was Succeed.</string>
+    <string name="sync_no_data_succeed">No data to sync.</string>
+    <string name="sync_data_error">Error syncing data with Server.</string>
+
+    <string name="navigation_drawer_open">Open menu</string>
+    <string name="navigation_drawer_close">Close menu</string>
+    <string name="title_fr_about_version">Version %1$s</string>
+    <string name="title_fr_about_send_feedback">SEND FEEDBACK</string>
+    <string name="title_fr_about_app_better">We welcome your suggestions\nto further improve this product.</string>
+    <string name="title_fr_about_privacy_policy">PRIVACY POLICY</string>
+    <string name="title_fr_about_show_tutorial">Show tutorial</string>
+    <string name="title_fr_about_show_app_manual">Show application manual</string>
+    <string name="title_fr_about_copyright">© 2016 World Bank</string>
+
+    <string name="summary_vertical_acceleration_value">%1$s m/s^2</string>
+    <string name="measurement_datetime">Actual time: %1$s</string>
+    <string name="duration_actual_value">Duration: %1$s</string>
+    <string name="accelerometer_actual_value">Accelerometer X Y Z, m/s^2:\n%1$s</string>
+    <string name="accelerometer_linear_value">Linear X Y Z, m/s^2:\n%1$s</string>
+    <string name="accelerometer_gravity_value">Gravity X Y Z, m/s^2:\n%1$s</string>
+    <string name="rotation_vector_value">Rotation angle (%1$s s), degree: %2$s</string>
+    <string name="device_not_fixed">WARNING! DEVICE NOT FIXED!\nRotation angle (%1$s s), degree: %2$s</string>
+    <!-- <string name="gyroscope_value">Gyroscope value: %1$s</string> -->
+    <string name="speed_actual_value">Actual speed, km/hour: %1$s</string>
+    <string name="speed_calc_value">Accelerometer speed calc value %1$s km/hour</string>
+    <string name="gps_accuracy">Accuracy: %1$s</string>
+    <string name="gps_distance">Actual distance, m: %1$s</string>
+    <string name="html_text_color_str">&lt;font color=\'%1$s\'&gt;%2$s&lt;/font&gt;</string>
+
+    <string name="distance_format">%2.0f m</string>
+    <string name="speed_format">%2.0f km/h</string>
+
+    <string name="accelerometer_data_title">ACCELEROMETER DATA</string>
+    <string name="gps_data_title">GPS DATA</string>
+    <string name="sleep_mode_title">SLEEPING MODE</string>
+    <string name="auto_roughness_detection_title">AUTOMATIC ROAD ROUGHNESS CONDITION DETECTION</string>
+
+    <string name="calculate_button_str">Calculate</string>
+    <string name="distance_value_str">Distance: %1$s km</string>
+    <string name="average_speed_value_str">Average Speed: %1$s km/h</string>
+    <string name="speed_format_str">%1$s km/h</string>
+    <string name="road_quality_value_str">Road Quality: %1$s</string>
+    <string name="time_value_str">Time: %1$s</string>
+    <string name="number_100m_intervals_value_str">Number of 100 meter intervals: %1$s</string>
+    <string name="number_bump_events_value_str">Number of bump events: %1$s</string>
+    <string name="standard_deviation_value_str">Standard Deviation: %1$s</string>
+    <string name="sync_data_str">Sync data to server</string>
+    <string name="ftp_upload">FTP upload</string>
+    <string name="edit_details">Edit Details</string>
+    <string name="send_csv_data_str">Send measured data into CSV format</string>
+    <string name="show_processed_items_str">Show calculated data items list</string>
+    <string name="hide_processed_items_str">Hide calculated data items list</string>
+
+    <string name="allow_gps_text">GPS sensor is disabled. Would you like to enable it?</string>
+    <string name="yes_button_txt">Yes</string>
+    <string name="no_button_txt">No</string>
+    <string name="ok_btn_txt">OK</string>
+    <string name="cancel_btn_txt">Cancel</string>
+    <string name="export_finished">Export has been finished</string>
+    <string name="ftp_error">FTP error! Sending via email</string>
+    <string name="export_finished_Ftp">Uploading results to FTP</string>
+    <string name="ftp_uploading_done">FTP uploading done</string>
+    <string name="google_maps_key">AIzaSyB0eK89KIDgv9OGrCcc6rvzCMqjI1JkYaI</string>
+    <string name="show_map">show map</string>
+    <string name="confirm_measurement_details">Confirm Measurement details</string>
+    <string name="non_editable_warning">Sorry, this measurement detail is not editable for now. To be implemented</string>
+    <string name="run_number_title">Run number: %1$s</string>
+    <string name="road_segment_id_title">Road Segment ID: %1$s</string>
+    <string name="max_speed_value_str">Selected Speed: %1$s km/h</string>
+
+    <string name="title_activity_maps">Reported issues</string>
+    <string name="image_description_my_report">my_report</string>
+    <string name="image_description_about">actionbar_about</string>
+    <string name="image_description_add_new">add_new</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="title_menu_road_issue">Road Safety Issues</string>
+    <string name="title_menu_my_issues">My reportings</string>
+    <string name="title_menu_quick_start">Quick start</string>
+    <string name="title_menu_new_project">New project</string>
+    <string name="title_menu_new_road">New road</string>
+    <string name="title_menu_select_project">Select Project/Road</string>
+    <string name="title_menu_tags">Tags</string>
+    <string name="title_menu_projects">Projects</string>
+    <string name="title_menu_roads">Roads</string>
+    <string name="title_menu_employee_signin">Employee Sign In</string>
+    <string name="title_menu_signin">Sign In</string>
+    <string name="title_menu_issue_details">Issue Details</string>
+    <string name="title_menu_tag_details">Tag Details</string>
+    <string name="title_menu_report_issue">Report Issue</string>
+
+    <string name="title_menu_header_project">Project: </string>
+    <string name="title_menu_header_road">Road: </string>
+    <string name="title_menu_header_distance">Distance: </string>
+
+    <string name="message_dialog_loading">Loading...</string>
+    <string name="message_dialog_sending">Sending...</string>
+
+    <string name="title_tab_map">Map</string>
+    <string name="title_tab_list">List</string>
+
+<!-- <string name="title_synchronize_now"></string> -->
+    <string name="progressLoginGoogle">Contacting Google ...</string>
+
+    <string name="title_fr_login_transport_ministry">If you are from road management agencies, please log in.</string>
+    <string name="title_fr_login_please_signin">Please, sign in</string>
+    <string name="title_fr_login_without_signin">or start without sign in</string>
+    <string name="title_fr_login_signin">SIGN IN</string>
+    <string name="title_fr_login_regular_user">I am a regular user</string>
+    <string name="label_fr_login_email">E-mail</string>
+    <string name="label_fr_login_password">Password</string>
+
+
+    <string name="title_fr_settings_load_data_to_dropbox">EXPORT DATA</string>
+    <string name="title_fr_settings_reset">RESET ALL DATA</string>
+
+    <string name="title_ac_help_skip">Skip</string>
+
+    <string name="title_fr_report_send_report">Report</string>
+    <string name="title_fr_report_add_least_photo">AT LEAST ONE</string>
+    <string name="title_fr_report_add_photo">ADD PHOTOS</string>
+    <string name="title_fr_report_add_details">ADD ISSUE DETAILS</string>
+    <string name="label_fr_report_add_notes">Add notes</string>
+    <string name="label_fr_report_issue_type">Select issue type</string>
+    <string name="label_fr_report_road_condition">Select road condition</string>
+
+    <string name="message_dialog_no_internet">No connection to the Internet. Do you want to keep the issue locally?</string>
+    <string name="message_dialog_change_picture">To change the image, remove the old</string>
+    <string name="message_dialog_no_correct_filled_data">One or more fields filled incorrectly, please check you input</string>
+    <string name="title_email_chooser_send_feedback">Send feedback</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="apply">Apply</string>
+    <string name="yes">Yes</string>
+    <string name="off">Off</string>
+    <string name="soft">Soft-medium</string>
+    <string name="medium">Hard-medium</string>
+    <string name="hard">SUV</string>
+    <string name="save_to_device">Export to device</string>
+    <string name="save_to_dropbox">Export to %1$s</string>
+    <string name="intervals">Intervals</string>
+    <string name="bumps">Bumps</string>
+    <string name="tags">Tags</string>
+    <string name="always">Always</string>
+    <string name="reset_all_data">All data reset</string>
+    <string name="synchronize">Synchronize</string>
+    <string name="suspension_type">Suspension type</string>
+    <string name="sync_data_type">Sync data type</string>
+    <string name="export_title_dialog">Export data</string>
+    <string name="select_filter">Select Filter</string>
+    <string name="time_interval">Time interval</string>
+    <string name="thresholds">Thresholds</string>
+    <string name="less_thresholds">Thresholds (&lt;50 km/h)</string>
+    <string name="more_thresholds">Thresholds (&gt;50 km/h)</string>
+    <string name="wifi_only">Wi-Fi only</string>
+    <string name="no">No</string>
+    <string name="title_intent_open_gallery">Image from Gallery</string>
+    <string name="export_all_str">Export All Records to CSV</string>
+    <string name="export_all_progress_str">Exporting All Records to CSV...</string>
+    <string name="export_all_progress_info_str">%1$d of %2$d processed</string>
+    <string name="export_complete_str">Export data procedure completed</string>
+    <string name="export_cancel_prompt_str">Do you want to cancel exporting data?</string>
+    <string name="email_data_subject_text">Exported data of \"%1$s\"</string>
+    <string name="measurement_in_progress_warning_text">Current measurement session is still active.\n\nDo you want to close it?</string>
+
+    <string name="delete_all_data_folder_str">Attention,\nall collected data will be deleted from your device.\nDo you wish to continue?</string>
+    <string name="delete_folder_str">Do you really want to delete folder %1$s ?</string>
+    <string name="delete_road_str">Do you really want to delete road %1$s ?</string>
+    <string name="delete_measurement_str">Do you really want to delete link %1$s ?</string>
+    <string name="delete_tag_prompt_str">Do you really want to delete tag?</string>
+    <string name="delete_item_prompt_str">Do you really want to delete item?</string>
+
+    <string name="title_search_edit_text">Search</string>
+
+    <string name="help_step">Step %1$d.</string>
+    <string name="help_finish">Start Now</string>
+    <string name="help_label_finish">READY TO START?</string>
+    <string name="help_lable_how">HOW IT WORKS:</string>
+
+    <string name="message_dialog_make_picture_camera">
+        Take new photo
+    </string>
+
+    <string name="message_dialog_make_picture_gallery">
+      Choose from gallery
+    </string>
+
+    <string-array name="fr_report_spinner_items">
+        <item>Broken road</item>
+        <item>Road accident</item>
+        <item>Pit on the road</item>
+        <item>Luke</item>
+        <item>Rails</item>
+        <item>Pit in the yard</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="fr_report_spinner_items_road_condition">
+        <item>Good</item>
+        <item>Fair</item>
+        <item>Poor</item>
+        <item>Bad</item>
+    </string-array>
+
+    <string name="title_activity_help">HelpActivity</string>
+    <string name="title_pager_photos">PHOTO</string>
+    <string name="title_pager_plural_photos">PHOTOS</string>
+    <string name="send_hint">Send</string>
+    <string name="save_hint">Save</string>
+    <string name="save">Save</string>
+    <string name="update_hint">Update</string>
+    <string name="export_hint">Export</string>
+    <string name="create_tag">Create Tag</string>
+
+    <string name="summary_detected_road_bumps_text">Detected Road\nBumps</string>
+    <string name="summary_detected_road_issues_text">Detected Road\nIssues</string>
+    <string name="summary_bad_text">Poor</string>
+    <string name="summary_normal_text">Fair</string>
+    <string name="summary_good_text">Good</string>
+    <string name="summary_perfect_text">Excellent</string>
+    <string name="summary_none_text">None</string>
+    <string name="summary_speed_text">Current Speed</string>
+    <string name="summary_bump_text">Bump</string>
+    <string name="summary_manual_stop">STOP TRACKING</string>
+    <string name="summary_manual_start">START TRACKING</string>
+    <string name="summary_manual_pause">PAUSE MEASUREMENT</string>
+    <string name="summary_manual_resume">RESUME MEASUREMENT</string>
+    <string name="summary_bad_device_rotation">Please, hold your smartphone\nto get the correct data</string>
+    <string name="summary_bad_gps_signal">GPS signal is bad.\nThe measurements are not precise</string>
+    <string name="summary_dialog_close_str">Close</string>
+
+    <string name="summary_roughness_of_past_100m_str">Roughness of Past 100m:</string>
+    <string name="summary_bumps_potholes_str">Major Bumps/Potholes:</string>
+    <string name="summary_distance_evaluated_text">Distance evaluated:</string>
+    <string name="summary_data_collection_status_off_text">Data Collection Status: Off</string>
+    <string name="summary_data_collection_status_on_text">Data Collection Status: On</string>
+    <string name="summary_device_not_fixed_text">Please fix your phone or place it on a stable surface</string>
+    <string name="summary_low_speed_text">Low speed (&#60;%1$2.0f km/h)</string>
+    <string name="summary_no_gps_text">GPS not available</string>
+
+    <string name="summary_graph_domain_text">Time, s</string>
+    <string name="summary_graph_range_text">Vertical Acceleration</string>
+
+    <string name="title_google_map">ic_my_location</string>
+    <string name="issue_type">Issue type</string>
+
+    <string name="reported">Reported</string>
+    <string name="location">Location</string>
+    <string name="notes">Notes</string>
+    <string name="vertical_acceleration">Vertical Acceleration</string>
+    <string name="road_interval">Road Interval:</string>
+    <string name="file_not_exist">File doesn\'t exist.</string>
+
+    <string name="all_data_tab_str">ALL</string>
+    <string name="current_data_tab_str">CURRENT</string>
+    <string name="incorrect_email">Check correct enter email</string>
+    <string name="empty_field">Field Password can\'t be empty</string>
+    <string name="sign_in_user">Signing user, please wait</string>
+    <string name="successfully_sign_in">You have successfully sign in</string>
+    <string name="unable_sign_in">Unable to sign in</string>
+    <string name="signed_in_as">You are signed in as </string>
+    <string name="title_fr_login_signout">SIGN OUT</string>
+    <string name="meters">&#160;meters</string>
+    <string name="summary_all_distance_text">Total road roughness evaluated:&#160;</string>
+    <string name="all_summary_bump_title">Total number of bumps:</string>
+    <string name="ms_format">%1$s ms</string>
+    <string name="kilometers_str">km</string>
+    <string name="meters_str">m</string>
+    <string name="ms_500">500ms</string>
+    <string name="ms_300">300ms</string>
+    <string name="ms_200">200ms</string>
+    <string name="ms_100">100ms</string>
+    <string name="seconds">s</string>
+    <string name="open">Open</string>
+    <string name="more">More</string>
+    <string name="none_text">None</string>
+
+    <!--CUSTOM INPUT DIALOG-->
+    <string name="add_new_folder">Add new project</string>
+    <string name="add_new_record">Add new voice comment</string>
+    <string name="add_new_road">Add new road</string>
+    <string name="add_new_road_title">Add new road (%1$s)</string>
+    <string name="rename_folder">Rename project</string>
+    <string name="rename_road">Rename road</string>
+
+    <string name="save_to_title">Save to</string>
+    <string name="current_project_text">Current project</string>
+    <string name="select_text">Select</string>
+    <string name="select_later_text">Select later</string>
+    <string name="select_project_title">Select project</string>
+    <string name="select_road_title">Select road</string>
+
+    <string name="measurement_saved_text">Link successfully saved</string>
+    <string name="road_moved_text">Road successfully moved</string>
+    <string name="road_renamed_text">Road successfully renamed</string>
+    <string name="measurement_moved_text">Link successfully moved</string>
+    <string name="tag_moved_text">Tag successfully moved</string>
+    <string name="default_road_restricted_text">This operation not allowed for default project</string>
+    <string name="project_selected_text">Current project is \"%1$s\"</string>
+    <string name="road_selected_text">Current road is \"%1$s\"</string>
+    <string name="overall_distance_text">%1$s (%2$s)</string>
+    <string name="overall_distance_text_color">%1$s &lt;font color=\'blue\'&gt;(%2$s)&lt;/font&gt;</string>
+    <string name="overall_path_distance_none">n/a</string>
+
+    <string name="options_title">Options</string>
+    <string name="rename_item_title">Rename</string>
+    <string name="edit_item_title">Edit</string>
+    <string name="send_item_title">Send</string>
+    <string name="sync_item_title">Export to %1$s</string>
+    <string name="move_item_title">Move</string>
+    <string name="open_item_title">Open</string>
+    <string name="select_item_title">Select</string>
+
+    <string name="dropbox_dialog_title">Export data to %1$s</string>
+    <string name="dropbox_dialog_descr_text">Data will be exported into this directory:</string>
+
+    <!--TAGS SCREEN-->
+    <string name="tags_list_tab_name">LIST</string>
+    <string name="tags_map_tab_name">MAP</string>
+
+    <!--NEW TAG SCREEN-->
+    <string name="title_fr_new_tag_pictures">Pictures</string>
+    <string name="title_fr_new_road_condition">Road Condition</string>
+    <string name="title_fr_new_road_selected_condition">Condition: %1$s</string>
+    <string name="title_fr_new_road_unique_id">Tag ID: &lt;font color=\'#2196f3\'&gt;%1$s&lt;/font&gt;</string>
+    <string name="title_fr_new_tag_voice_comment">Voice Comments</string>
+    <string name="title_fr_new_tag_add_notes">Add Notes</string>
+    <string name="title_fr_new_tag_add_iri">Add IRI</string>
+
+    <!--FOLDER LIST ITEM-->
+    <string name="list_item_folder_details">%1$d road - %2$s</string>
+
+    <!--ROADS SCREEN-->
+    <string name="list_item_road_details">%1$d links - %2$s</string>
+    <string name="road_list_tab_name">LIST</string>
+    <string name="road_tags_tab_name">TAGS</string>
+    <string name="road_map_tab_name">MAP</string>
+
+    <!-- ROAD SUMMARY SCREEN -->
+    <string name="road_summary_tab_name">SUMMARY</string>
+    <string name="road_summary_project_time_text">Project created:</string>
+    <string name="road_summary_project_roads_text">Number of roads:</string>
+    <string name="road_summary_project_distance_text">Distance:</string>
+    <string name="road_summary_project_iri_text">Average IRI:</string>
+    <string name="road_summary_project_speed_text">Average Speed:</string>
+
+    <!--MEASUREMENT SCREEN-->
+    <string name="list_item_meas_details">%1$d intervals - %2$s</string>
+    <string name="measurements_tab_info_name">INFO</string>
+    <string name="measurements_tab_map_name">MAP</string>
+
+    <!-- MEASUREMENTS ITEM LIST SCREEN -->
+    <string name="measurements_item_list_title">id: %1$s %2$s</string>
+    <string name="measurements_item_list_iri">IRI: %1$s</string>
+    <string name="measurements_item_suspension">Suspension: %1$s</string>
+
+    <!--SETTINGS-->
+    <string name="fr_settings_dbx_export_data">EXPORT DATA TO .CSV</string>
+    <string name="fr_settings_dbx_login">LOG IN TO %1$s</string>
+    <string name="fr_settings_dbx_logout">LOG OUT OF %1$s</string>
+    <string name="fr_settings_user_name">(%1$s)</string>
+
+    <string name="fr_settings_prividerType_dropbox">Dropbox</string>
+    <string name="fr_settings_prividerType_google">Google Drive</string>
+    <string name="fr_settings_db_template_for_export">L%1$s-%2$s</string>
+    <string name="fr_settings_db_template_for_export_tag">T%1$s-%2$s</string>
+
+    <!--TOASTS-->
+    <string name="toast_successful_login_to_dbx">Log in success</string>
+    <string name="toast_login_to_dropbox_please">Log in please</string>
+    <string name="toast_failed_login_to_dbx">Log in failed</string>
+    <string name="toast_successful_logout_of_dbx">Log out success</string>
+    <string name="toast_successful_dbx_synchronise">Data exported successfully</string>
+    <string name="toast_error_dbx_synchronise">Not all data was exported</string>
+    <string name="toast_error_dbx_synchronise_no_data">No files to synchronize</string>
+    <string name="toast_error_current_folder_and_road_not_selected">Current Project or Road is not selected</string>
+    <string name="toast_error_check_entered_data">Check entered data please</string>
+    <string name="toast_error_stop_tracking_data_please">Stop tracking data before reset please</string>
+    <string name="toast_error_folder_exist_in_dropbox_yet">The folder "%1$s" exists in your cloud store. Please update the folder name to proceed with the uploading</string>
+    <string name="toast_export_to_device_success">Exported data to device successfully</string>
+    <string name="toast_export_to_dropbox_success">Exported to cloud store successfully</string>
+
+</resources>

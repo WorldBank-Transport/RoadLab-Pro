@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <CheckBox
+        android:id="@+id/settings_item_switch_mode"
+        android:button="@drawable/switch_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="70dip"
+        android:layout_gravity="right"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:checked="false"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/settings_item_divider"
+        android:background="@drawable/default_divider_list"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/settings_mode_details_item_layout" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/settings_mode_details_item_layout"
+        android:layout_toLeftOf="@+id/settings_item_switch_mode"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/settings_item_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:font="@string/font_roboto_medium"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/settings_item_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:font="@string/font_roboto_regular"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

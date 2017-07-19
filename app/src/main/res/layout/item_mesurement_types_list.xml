@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.softteco.roadlabpro.view.TypefaceTextView
+        android:id="@+id/text"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dip"
+        android:layout_marginBottom="10dip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:font="@string/font_roboto_regular"
+        android:textColor="@android:color/black"
+        android:text="text"
+        android:textSize="20sp"
+        android:paddingLeft="20dp" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/list_import_ok_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="20dp" />
+
+</RelativeLayout>

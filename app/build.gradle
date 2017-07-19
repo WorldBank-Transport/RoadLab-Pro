@@ -1,0 +1,116 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'checkstyle'
+
+check.dependsOn 'checkstyle'
+checkstyle.configProperties.config_loc = checkstyle.configFile.parentFile
+task checkstyle(type: Checkstyle) {
+    configFile file("config/checkstyle/checkstyle.xml")
+    source 'src'
+    include '**/*.java'
+    exclude '**/gen/**'
+
+    classpath = files()
+}
+def env = System.getenv()
+def number = env['BUILD_NUMBER']
+def final_number = 10 + (number as Integer ?: 0)
+
+//def env_fake_speed = System.getProperties().getProperty('FAKE_SPEED')
+//def String fake_speed = "true".equals(env_fake_speed) ? "true" : "false";
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    lintOptions {
+        disable 'InvalidPackage'
+        abortOnError true
+    }
+
+    packagingOptions {
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/LICENSE'
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def apk = output.outputFile
+            def newName = "RoadLabPro_v${versionName}.apk"
+            output.outputFile = new File(apk.parent, newName)
+        }
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("keystore/release.keystore1.jks")
+            storePassword "1q2wdfg42cd2"
+            keyAlias "qualityroad"
+            keyPassword "1q2wdfg42cd2"
+        }
+        release {
+            storeFile file("keystore/release.keystore1.jks")
+            storePassword "1q2wdfg42cd2"
+            keyAlias "qualityroad"
+            keyPassword "1q2wdfg42cd2"
+        }
+    }
+
+    productFlavors {
+        fakeSpeed {
+            //versionName "1." + final_number + ("true".equals(fake_speed) ? ".f" : "")
+            //println "fakeSpeed: " + fake_speed
+            //println "versionName: " + versionName
+            //buildConfigField "Boolean", "FAKE", fake_speed;
+            versionName "1." + final_number + ".f"
+            buildConfigField "Boolean", "FAKE", "true";
+        }
+        defaultConfig {
+            buildConfigField "Boolean", "FAKE", "false";
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.softteco.roadlabpro"
+        minSdkVersion 19
+        targetSdkVersion 22
+        versionCode final_number as Integer ?: 0
+        versionName "1." + final_number
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'src/libs', include: ['*.jar'])
+    compile 'com.joanzapata.pdfview:android-pdfview:1.0.4@aar'
+    compile 'com.android.support:appcompat-v7:22.0.0'
+    compile 'com.android.support:support-v4:22.0.0'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.4'
+    compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
+    compile 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
+//  compile 'com.google.android.gms:play-services:8.4.0'
+    compile 'com.google.android.gms:play-services-maps:8.4.0'
+    compile 'com.google.android.gms:play-services-location:8.4.0'
+    compile 'com.google.android.gms:play-services-drive:8.4.0'
+    compile 'com.google.android.gms:play-services-auth:8.4.0'
+    compile 'com.androidplot:androidplot:0.6.1'
+    compile 'com.androidplot:androidplot-core:0.6.1'
+    compile 'com.dropbox.core:dropbox-core-sdk:2.0.1'
+    compile 'com.squareup.okhttp:okhttp:2.4.0'
+    compile files('src/libs/opencsv-3.2.jar')
+    compile files('src/libs/commons-net-3.3.jar')
+    //compile 'org.apache.commons:commons-io:1.3.2'
+    compile 'commons-io:commons-io:2.4'
+    compile project(":simplekml")
+}

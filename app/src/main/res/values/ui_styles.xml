@@ -1,0 +1,17 @@
+<resources>
+    <style name="IssueDetectionText">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">16dip</item>
+    </style>
+
+    <style name="HintText">
+        <item name="android:textColor">@color/hint_color</item>
+        <item name="android:textSize">12dip</item>
+    </style>
+
+    <declare-styleable name="PieGraph">
+        <attr name="pieInnerCircleRatio" format="integer"/>
+        <attr name="pieSlicePadding" format="dimension"/>
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.softteco.roadlabpro.view.TypefaceTextView
+        android:id="@+id/label"
+        app:font="@string/font_roboto_regular"
+        android:text="TAB2"
+        android:textSize="18dip"
+        android:padding="15dip"
+        android:textColor="@android:color/black"
+        android:background="@drawable/black_selectable_bgr"
+        android:clickable="true"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View
+        android:id="@+id/selector"
+        android:layout_gravity="bottom"
+        android:background="@android:color/white"
+        android:layout_height="4dip"
+        android:layout_width="match_parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="1px"
+        android:layout_marginTop="12dip"
+        android:layout_marginBottom="12dip"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="@android:color/white" />
+
+</FrameLayout>

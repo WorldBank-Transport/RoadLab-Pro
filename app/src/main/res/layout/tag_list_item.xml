@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_centerVertical="true"
+    android:layout_margin="10dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="5dp"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:padding="10dp">
+
+    <com.softteco.roadlabpro.view.CircleImageView
+        android:id="@+id/tag_list_item_circle"
+        style="@style/CircleImageViewInTagList"
+        app:circleColor="@color/chart_bad_roads_color"
+        app:circleRadius="30" />
+
+    <RelativeLayout
+        android:layout_marginLeft="10dp"
+        android:id="@+id/dataLayout"
+        android:layout_toRightOf="@+id/tag_list_item_circle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tag_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tag_item_iri"
+            android:ellipsize="end"
+            android:text="Tag title"
+            android:textColor="@android:color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tag_item_iri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IRI"
+            android:layout_alignParentRight="true"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dataLayout"
+        android:layout_toRightOf="@+id/tag_list_item_circle"
+        android:layout_gravity="left"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tag_item_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/tag_item_is_uploaded"
+                android:text="Details"
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:visibility="invisible"
+                android:id="@+id/tag_item_is_uploaded"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

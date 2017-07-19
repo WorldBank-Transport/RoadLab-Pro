@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <com.softteco.roadlabpro.view.TypefaceTextView
+        android:id="@+id/dlg_sync_state_header_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:font="@string/font_roboto_medium"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:text="@string/synchronize"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="10dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/dlg_sync_state_divider_header"
+        android:layout_below="@+id/dlg_sync_state_header_title"
+        android:layout_centerHorizontal="true"
+        android:background="@color/dialog_divider" />
+
+    <com.softteco.roadlabpro.view.TypefaceTextView
+        android:id="@+id/dlg_sync_state_always_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:font="@string/font_roboto_regular"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:text="@string/always"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/dlg_sync_state_header_title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dlg_sync_state_divider_value"
+        android:background="@drawable/default_divider_list"
+        android:layout_alignBottom="@+id/dlg_sync_state_always_value"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <com.softteco.roadlabpro.view.TypefaceTextView
+        android:id="@+id/dlg_sync_state_wifi_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:font="@string/font_roboto_regular"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:text="@string/wifi_only"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/dlg_sync_state_always_value"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

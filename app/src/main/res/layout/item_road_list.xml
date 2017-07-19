@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_centerVertical="true"
+    android:layout_margin="10dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="5dp"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/road_list_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:ellipsize="end"
+            android:text="Road's name"
+            android:textColor="@android:color/black"
+            android:textSize="17sp" />
+
+        <com.softteco.roadlabpro.view.TypefaceTextView
+            android:id="@+id/road_list_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:font="@string/font_roboto_medium"
+            android:layout_gravity="top"
+            android:layout_weight="7"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:text="01.04.2016"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/road_list_details_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <com.softteco.roadlabpro.view.TypefaceTextView
+                android:id="@+id/road_list_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                app:font="@string/font_roboto_medium"
+                android:text="text"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/road_list_item_image"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/stats_layout"
+            android:layout_below="@+id/road_list_details_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp">
+
+            <com.softteco.roadlabpro.view.TypefaceTextView
+                android:id="@+id/stat_bad_text"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:font="@string/font_roboto_medium"
+                android:paddingRight="10dip"
+                android:text="text"
+                android:textColor="@color/chart_bad_roads_color"
+                android:textSize="14sp" />
+
+            <com.softteco.roadlabpro.view.TypefaceTextView
+                android:id="@+id/stat_normal_text"
+                android:layout_toRightOf="@+id/stat_bad_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dip"
+                android:text="text"
+                android:textColor="@color/chart_normal_roads_color"
+                android:textSize="14sp" />
+
+            <com.softteco.roadlabpro.view.TypefaceTextView
+                android:id="@+id/stat_good_text"
+                android:layout_toRightOf="@+id/stat_normal_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dip"
+                android:text="text"
+                android:textColor="@color/chart_good_roads_color"
+                android:textSize="14sp" />
+
+            <com.softteco.roadlabpro.view.TypefaceTextView
+                android:id="@+id/stat_perfect_text"
+                android:layout_toRightOf="@+id/stat_good_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dip"
+                android:text="text"
+                android:textColor="@color/chart_perfect_roads_color"
+                android:textSize="14sp" />
+
+            <com.softteco.roadlabpro.view.TypefaceTextView
+                android:id="@+id/average_iri_text_text"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dip"
+                android:text="text"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

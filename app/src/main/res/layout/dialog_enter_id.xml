@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <com.softteco.roadlabpro.view.TypefaceTextView
+        android:id="@+id/dlg_enter_id_header_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:font="@string/font_roboto_medium"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:text="@string/synchronize"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/dlg_sync_state_divider_header"
+        android:layout_below="@+id/dlg_enter_id_header_title"
+        android:layout_centerHorizontal="true"
+        android:background="@color/dialog_divider" />
+
+    <EditText
+        android:id="@+id/dlg_enter_id_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/dlg_enter_id_header_title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/line_location_notes"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/dlg_enter_id_value"
+        android:padding="10dp">
+        <com.softteco.roadlabpro.view.CustomButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/ok"
+            android:id="@+id/dlg_enter_id_btn_ok"
+            android:background="@drawable/button_blue_selected"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"
+            app:font="@string/font_roboto_medium"
+            android:layout_weight="50"
+            android:layout_marginRight="5dp" />
+        <com.softteco.roadlabpro.view.CustomButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel_btn_txt"
+            android:id="@+id/dlg_enter_id_btn_cancel"
+            android:background="@drawable/button_blue_selected"
+            android:textColor="@android:color/white"
+            app:font="@string/font_roboto_medium"
+            android:layout_weight="50"
+            android:layout_marginLeft="5dp" />
+    </LinearLayout>
+
+</RelativeLayout>
